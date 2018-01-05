@@ -4,7 +4,10 @@
 
 **Config: ssd_mobilenet_v1_coco**
 
+#
 
+### Video Demo:
+[![Video Demo](math_object_detection/s_img/Screen Shot 2018-01-04 at 5.58.45 PM.png)](https://youtu.be/iss52uQS6jo)
 
 
 # Source:
