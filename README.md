@@ -26,6 +26,11 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 
 [![train image](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)
 
+#### Step 2:
+**Box & label each class** - In order to train and test the model, TensofFlow requires that a box is drawn for each class. To be more specific, it needs the X and Y axis (ymin, xmin, ymax, xmax) of the box in relation to the image. Thanks to tzutalin [tzutalin, labelImg](https://github.com/tzutalin/labelImg), with the creation of GUI that makes this process easy. These coordinates is then respectively divided by the lenght or width of the image and is stored as a float. An example of the process is shown below. (Note: the current model contains 23 classes)
+
+[![train image](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)
+
 
 # Source & Support Files
 
