@@ -1,7 +1,7 @@
 # Math Operators Object Detection (Video Demo):
 [![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
 
-Utilizing TensorFlow Object Detection API open source framework, it makes it feasible to construct, train and deploy my own custom object detection model. In this instance, I have created my own image library (of math numbers & operators) for training and testing. This can be found under the [images](https://github.com/stevenobadja/math_object_detection/tree/master/images) folder.
+Utilizing TensorFlow Object Detection API open source framework makes it feasible to construct, train and deploy a custom object detection model. In this instance, I have created from scratch an [image library](https://github.com/stevenobadja/math_object_detection/tree/master/images) (of math numbers & operators) to train on the pre-existing [ssd_mobilenet_v1_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) model. 
 
 ### Powered by: Tensorflow
 **Model:** ssd_mobilenet_v1_coco_2017_11_17<br/>
