@@ -7,7 +7,7 @@
 #
 
 ### Video Demo:
-[![Video Demo](math_object_detection/s_img/Screen Shot 2018-01-04 at 5.58.45 PM.png)](https://youtu.be/iss52uQS6jo)
+[(https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
 
 
 # Source:
