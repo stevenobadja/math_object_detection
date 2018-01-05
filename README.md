@@ -1,7 +1,7 @@
 # Math Operators Object Detection (Video Demo)
 [![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
 
-Utilizing TensorFlow Object Detection API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects handwritten digits and simple math operators. In addition, the output of the predicted objects (numbers & math operators) are then evaluated and solved. Currently, the model created above is limited to basic math and simple algebra.
+Utilizing TensorFlow **Object Detection** API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects **handwritten digits** and **simple math operators**. In addition, the output of the predicted objects (numbers & math operators) are then evaluated and solved. Currently, the model created above is limited to **basic math** and **linear algebra**.
 
 # Model
 ### Powered by: Tensorflow
@@ -21,9 +21,10 @@ Utilizing TensorFlow Object Detection API open source framework makes it feasibl
 
 # Summary of training this model
 
-#### Step-1
-**Create an image library** - The pre-existing [ssd_mobilenet_v1_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) model was trained with a custom, created from scratch, [image library](https://github.com/stevenobadja/math_object_detection/tree/master/images) (of math numbers & operators). This image library can be substituted with any object or objects of choice.
+#### Step 1:
+**Create an image library** - The pre-existing [ssd_mobilenet_v1_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) model was trained with a custom, created from scratch, [image library](https://github.com/stevenobadja/math_object_detection/tree/master/images) (of math numbers & operators). This image library can be substituted with any object or objects of choice. Due to the constraint of time, the model above was trained on a total of 345 images of which 10% was allocated for test validation.
 
+[![train image](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)
 
 
 # Source & Support Files
