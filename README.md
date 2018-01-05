@@ -31,6 +31,11 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 
 [![Box Process](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)
 
+#### Step 3:
+**Convert files** - Once the labeling process is complete the folder will be full with XML files, however this cannot be used yet by TensorFlow for training and testing. Instead the XML files needs to be converted into a CSV file using (xml_to_csv.py, which is found in the object detection folder provided by [TensorFlow](https://github.com/tensorflow/models/tree/master/research/object_detection)). Then the CSV file will then be converted to tfrecords file (using generate_tfrecord.py, which is also found in the object detection folder from [TensorFlow](https://github.com/tensorflow/models/tree/master/research/object_detection)).
+
+#### Step 4:
+**Create pbtxt** - Create a pbtxt file by creating ID's and Name (labels) for each class. This file will be used with the finished model as an category_index.
 
 # Source & Support Files
 
