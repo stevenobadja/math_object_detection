@@ -45,7 +45,13 @@ After the output layer, it compares the output to the intended output --> cost f
 
 1 cycle of summary above = 1 Global Step
 
+[![Global Step](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.26.40%20PM.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.26.40%20PM.png?raw=true)
+
 This process requires computing power, due to the constraints of hardware. This model was trained on the CPU only. To complete 50k Global Step it took approximately 4 days & 7 hours.
+
+[![Duration](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)
+
+[![Graph](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Chart%20at%2050k.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Chart%20at%2050k.png?raw=true)
 
 # Source & Support Files
 
