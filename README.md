@@ -27,7 +27,7 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 [![train image](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)
 
 #### Step 2:
-**Box & label each class** - In order to train and test the model, TensofFlow requires that a box is drawn for each class. To be more specific, it needs the X and Y axis (ymin, xmin, ymax, xmax) of the box in relation to the image. Thanks to tzutalin [tzutalin, labelImg](https://github.com/tzutalin/labelImg), with the creation of GUI that makes this process easy. These coordinates is then respectively divided by the lenght or width of the image and is stored as a float. An example of the process is shown below. (Note: the current model contains 23 classes)
+**Box & label each class** - In order to train and test the model, TensofFlow requires that a box is drawn for each class. To be more specific, it needs the X and Y axis (ymin, xmin, ymax, xmax) of the box in relation to the image. These coordinates is then respectively divided by the lenght or width of the image and is stored as a float. An example of the process is shown below. (Note: the current model contains 23 classes) Thanks to tzutalin [tzutalin, labelImg](https://github.com/tzutalin/labelImg), with the creation of GUI that makes this process easy.
 
 [![Box Process](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)
 
@@ -36,6 +36,16 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 
 #### Step 4:
 **Create pbtxt** - Create a pbtxt file by creating ID's and Name (labels) for each class. This file will be used with the finished model as an category_index.
+
+#### Step 5:
+**Train the model** - (See model above)
+Summary: input layer --> weights --> batch normalization --> hidden layer 1 (activation function: ReLu) --> weights batch normalization--> hidden layer 2 (activation function: ReLu) --> weights --> output layer.
+
+After the output layer, it compares the output to the intended output --> cost function (weighted_sigmoid) --> optimization function (optimizer) --> minimize cost (rms_prop_optimizer, learning rate = 0.004)
+
+1 cycle of summary above = 1 Global Step
+
+This process requires computing power, due to the constraints of hardware. This model was trained on the CPU only. To complete 50k Global Step it took approximately 4 days & 7 hours.
 
 # Source & Support Files
 
