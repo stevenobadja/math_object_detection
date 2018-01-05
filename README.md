@@ -1,7 +1,7 @@
 # Math Operators Object Detection (Video Demo)
 [![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
 
-Utilizing TensorFlow Object Detection API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects handwritten digits and simple math operators. The pre-existing [ssd_mobilenet_v1_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) model was trained with a custom, created from scratch, [image library](https://github.com/stevenobadja/math_object_detection/tree/master/images) (of math numbers & operators). This image library can be substituted with any object or objects of choice.
+Utilizing TensorFlow Object Detection API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects handwritten digits and simple math operators. In addition, the output of the predicted objects (numbers & math operators) are then evaluated and solved. Currently, the model created above is limited to basic math and simple algebra.
 
 # Model
 ### Powered by: Tensorflow
@@ -11,15 +11,22 @@ Utilizing TensorFlow Object Detection API open source framework makes it feasibl
 ### SSD Mobilenet Architecture
 [![SSD Mobilenet Architecture](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/SSD%20Mobilenet%20Architecture.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/SSD%20Mobilenet%20Architecture.png?raw=true)
 
-- **Convolution Neural network** - The convolutional layer is the core building block of a CNN. The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. During the forward pass, each filter is convolved across the width and height of the input volume, computing the dot product between the entries of the filter and the input and producing a 2-dimensional activation map of that filter. As a result, the network learns filters that activate when it detects some specific type of feature at some spatial position in the input. (**Source:** [Wikipedia](https://en.wikipedia.org/wiki/Convolutional_neural_network))
-- **Batch Normalization** - Batch normalization potentially helps in two ways: faster learning and higher overall accuracy. The improved method also allows you to use a higher learning rate, potentially providing another boost in speed. Normalization (shifting inputs to zero-mean and unit variance) is often used as a pre-processing step to make the data comparable across features. As the data flows through a deep network, the weights and parameters adjust those values, sometimes making the data too big or too small again - "internal covariate shift". By normalizing the data in each mini-batch, this problem is largely avoided. (**Source:** [Derek Chan ~ Quora](https://www.quora.com/Why-does-batch-normalization-help))
+- **Convolution Neural network** - The convolutional layer is the core building block of a CNN. The layer's parameters consist of a set of learnable filters (or kernels), which have a small receptive field, but extend through the full depth of the input volume. During the forward pass, each filter is convolved across the width and height of the input volume, computing the dot product between the entries of the filter and the input and producing a 2-dimensional activation map of that filter. As a result, the network learns filters that activate when it detects some specific type of feature at some spatial position in the input. (**Source:** [Wikipedia](https://en.wikipedia.org/wiki/Convolutional_neural_network))<br/>
+- **Batch Normalization** - Batch normalization potentially helps in two ways: faster learning and higher overall accuracy. The improved method also allows you to use a higher learning rate, potentially providing another boost in speed. Normalization (shifting inputs to zero-mean and unit variance) is often used as a pre-processing step to make the data comparable across features. As the data flows through a deep network, the weights and parameters adjust those values, sometimes making the data too big or too small again - "internal covariate shift". By normalizing the data in each mini-batch, this problem is largely avoided. (**Source:** [Derek Chan ~ Quora](https://www.quora.com/Why-does-batch-normalization-help))<br/>
 - **Rectified linear unit or (ReLU)** - ReLu is an activation function. In biologically inspired neural networks, the activation function is usually an abstraction representing the rate of action potential firing in the cell. In its simplest form, this function is binary—that is, either the neuron is firing or not. ReLU is half rectified from the bottom. It is f(s) is zero when z is less than zero and f(z) is equal to z when z is above or equal to zero. With a range of 0 to infinity. (**Source:** [Towards Data Science](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6))
 
 [![Batch Normalization](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Batch%20Normalization.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Batch%20Normalization.png?raw=true)
 
 [![ReLu](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/ReLu.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/ReLu.png?raw=true)
 
-# Source:
+# Summary of training this model
+
+**1. Create an image library:**
+The pre-existing [ssd_mobilenet_v1_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) model was trained with a custom, created from scratch, [image library](https://github.com/stevenobadja/math_object_detection/tree/master/images) (of math numbers & operators). This image library can be substituted with any object or objects of choice.
+
+
+
+# Source & Support Files
 
 **Google's object detection** [(Link)](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
