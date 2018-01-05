@@ -12,6 +12,14 @@ from utils import visualization_utils as vis_util
 # Set video capture from 2nd webcam
 cap = cv2.VideoCapture(1)
 
+# Record webcam activity
+codec = cv2.VideoWriter_fourcc('D','I','V','X')
+videoFile = cv2.VideoWriter();
+size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
+        int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+videoFile = cv2.VideoWriter();
+videoFile.open('video.avi', codec, 10, size, 1)
+
 sys.path.append("..")
 
 # Model trained with custom data
@@ -62,7 +70,7 @@ with detection_graph.as_default():
 
             # Set height and width of webcam
             height = 720
-            width = 1080
+            width = 1280
 
             # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
             image_np_expanded = np.expand_dims(image_np, axis=0)
@@ -85,7 +93,7 @@ with detection_graph.as_default():
 
             # Obtain classes and coordinates (xmin) as a list of tuples
             od_list = [[category_index.get(value).get('name'), boxes[0][index][1] * width] for index,
-                   value in enumerate(classes[0]) if scores[0, index] > 0.5]
+                   value in enumerate(classes[0]) if scores[0, index] > 0.65]
 
             # Reorder the tuples by their xmin coordinates
             od_list_seq = sorted(od_list, key=lambda x:(-x[1], x[0]), reverse=True)
@@ -106,16 +114,22 @@ with detection_graph.as_default():
             result = getresult(co_num_list, exp_result)
 
             # Convert math expression and result into a string
-#            obj = str(exp_result) + '=' + str(result)
-            obj = str(result)
+            if str(result) == '...':
+                obj = str(exp_result)
+            else:
+                obj = str(exp_result) + ' is ' + str(result)
 
             # Set font, print math expression and result
             font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(image_np, obj, (100, 1000), font, 5, (0, 0, 0), 0, cv2.LINE_AA)
+            cv2.putText(image_np, obj, (150, 1000), font, 3, (0, 0, 0), 0, cv2.LINE_AA)
+
+            # Record Video
+            videoFile.write(image_np)
 
             # Set camera resolution and create a break function by pressing 'q'
             cv2.imshow('object detection', cv2.resize(image_np, (width, height)))
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 cap.release()
+                videoFile.release()
                 cv2.destroyAllWindows()
                 break
