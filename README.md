@@ -8,7 +8,7 @@ Utilizing TensorFlow Object Detection API open source framework, it makes it fea
 **Config:** ssd_mobilenet_v1_coco<br/>
 
 # Source:
-<br/>
+
 ### Google's object detection
 [https://github.com/tensorflow/models/tree/master/research/object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
