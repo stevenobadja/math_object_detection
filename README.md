@@ -38,8 +38,8 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 **Create pbtxt** - Create a pbtxt file by creating ID's and Name (labels) for each class. This file will be used with the finished model as an category_index.
 
 #### Step 5:
-**Train the model** - (See model above)
-Summary: input layer --> weights --> batch normalization --> hidden layer 1 (activation function: ReLu) --> weights batch normalization--> hidden layer 2 (activation function: ReLu) --> weights --> output layer.
+**Train the model** - (See model above)<br/>
+Summary: input layer --> weights --> batch normalization --> hidden layer 1 (activation function: ReLu) --> weights batch normalization --> hidden layer 2 (activation function: ReLu) --> output layer.
 
 After the output layer, it compares the output to the intended output --> cost function (weighted_sigmoid) --> optimization function (optimizer) --> minimize cost (rms_prop_optimizer, learning rate = 0.004)
 
@@ -52,6 +52,9 @@ This process requires computing power, due to the constraints of hardware. This 
 [![Duration](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)
 
 [![Graph](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Chart%20at%2050k.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Chart%20at%2050k.png?raw=true)
+
+#### Step 6:
+**Export inference graph** - Once a model is trained with an acceptable loss rate. It is stopped by the user manually. As the model is being trained it is creates a checkpoint file after each set milestone. This checkpoint file is then converted into an inference graph which is used for deployment/serving.
 
 # Source & Support Files
 
@@ -80,3 +83,6 @@ Will contain:
 
 Will contain:
 - labelImg.py
+
+# Special Thanks!
+To Harrison Kinsley [(Sentdex)](http://sentdex.com/)
