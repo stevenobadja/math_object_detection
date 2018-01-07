@@ -1,5 +1,10 @@
 # Math Operators Object Detection (Video Demo)
-[![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
+
+### Test 1 - Simple Math
+[![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-07%20at%201.35.57%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
+
+### Test 2 - Linear Algebra
+[![Linear Algebra TensorFlow Object Detection - Test 2](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/uqbdKshCXgQ)
 
 Utilizing TensorFlow **Object Detection** API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects **handwritten digits** and **simple math operators**. In addition, the output of the predicted objects (numbers & math operators) are then evaluated and solved. Currently, the model created above is limited to **basic math** and **linear algebra**.
 
@@ -27,7 +32,7 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 [![train image](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/images/testadd2.3.jpg?raw=true)
 
 #### Step 2:
-**Box & label each class** - In order to train and test the model, TensofFlow requires that a box is drawn for each class. To be more specific, it needs the X and Y axis (ymin, xmin, ymax, xmax) of the box in relation to the image. These coordinates is then respectively divided by the lenght or width of the image and is stored as a float. An example of the process is shown below. (Note: the current model contains 23 classes) Thanks to tzutalin [tzutalin, labelImg](https://github.com/tzutalin/labelImg), with the creation of GUI that makes this process easy.
+**Box & label each class** - In order to train and test the model, TensorFlow requires that a box is drawn for each class. To be more specific, it needs the X and Y axis (ymin, xmin, ymax, xmax) of the box in relation to the image. These coordinates is then respectively divided by the lenght or width of the image and is stored as a float. An example of the process is shown below. (Note: the current model contains 23 classes) Thanks to tzutalin [tzutalin, labelImg](https://github.com/tzutalin/labelImg), with the creation of GUI that makes this process easy.
 
 [![Box Process](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.12.01%20PM.png?raw=true)
 
@@ -47,7 +52,7 @@ After the output layer, it compares the output to the intended output --> cost f
 
 [![Global Step](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.26.40%20PM.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%2011.26.40%20PM.png?raw=true)
 
-This process requires computing power, due to the constraints of hardware. This model was trained on the CPU only. To complete 50k Global Step it took approximately 4 days & 7 hours.
+This process requires heavy computing power, due to the constraints of hardware (CPU only), it took approximately 4 days & 7 hours to complete 50k Global Step.
 
 [![Duration](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Loss%20Relative%20at%2050k.png?raw=true)
 
