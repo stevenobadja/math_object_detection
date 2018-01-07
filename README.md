@@ -1,10 +1,10 @@
 # Math Operators Object Detection (Video Demo)
 
 ### Test 1 - Simple Math
-[![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-07%20at%201.35.57%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
+[![Custom Math Operators TensorFlow Object Detection - Test 1](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/iss52uQS6jo)
 
 ### Test 2 - Linear Algebra
-[![Linear Algebra TensorFlow Object Detection - Test 2](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-04%20at%205.58.45%20PM.png?raw=true)](https://youtu.be/uqbdKshCXgQ)
+[![Linear Algebra TensorFlow Object Detection - Test 2](https://github.com/stevenobadja/math_object_detection/blob/master/s_img/Screen%20Shot%202018-01-07%20at%201.35.57%20PM.png?raw=true)](https://youtu.be/uqbdKshCXgQ)
 
 Utilizing TensorFlow **Object Detection** API open source framework makes it feasible to construct, train and deploy a custom object detection model with ease. The detection model shown above uses TensorFlow's API and detects **handwritten digits** and **simple math operators**. In addition, the output of the predicted objects (numbers & math operators) are then evaluated and solved. Currently, the model created above is limited to **basic math** and **linear algebra**.
 
