@@ -70,12 +70,6 @@ Will contain:
 - export_inference_graph.py
 - All other support docs...
 
-**Racoon's object detection** [(Link)](https://github.com/datitran/raccoon_dataset)
-
-Will contain:
-- xml_to_csv.py
-- generate_tfrecord.py
-
 **Tensorflow detection model zoo** [(Link)](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
 Will contain:
@@ -87,6 +81,12 @@ Will contain:
 Will contain:
 - ssd_mobilenet_v1_coco (config used for this demo)
 - All other configs released by Tensorflow...
+
+**Racoon's object detection** [(Link)](https://github.com/datitran/raccoon_dataset)
+
+Will contain:
+- xml_to_csv.py
+- generate_tfrecord.py
 
 **Label images with labelImg** [(Link)](https://github.com/tzutalin/labelImg)
 
