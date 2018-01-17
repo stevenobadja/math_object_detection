@@ -44,7 +44,7 @@ Utilizing TensorFlow **Object Detection** API open source framework makes it fea
 
 #### Step 5:
 **Train the model** - (See model above)<br/>
-Summary: input layer --> weights --> batch normalization --> hidden layer 1 (activation function: ReLu) --> weights batch normalization --> hidden layer 2 (activation function: ReLu) --> output layer.
+Summary: input layer --> 3x3 CNN --> batch normalization --> activation function: ReLu --> 1x1 CNN --> batch normalization --> activation function: ReLu --> output layer.
 
 After the output layer, it compares the output to the intended output --> cost function (weighted_sigmoid) --> optimization function (optimizer) --> minimize cost (rms_prop_optimizer, learning rate = 0.004)
 
