@@ -66,11 +66,15 @@ This process requires heavy computing power, due to the constraints of hardware 
 **Google's object detection** [(Link)](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
 Will contain:
-- xml_to_csv.py
-- generate_tfrecord.py
 - train.py
 - export_inference_graph.py
 - All other support docs...
+
+**Racoon's object detection** [(Link)](https://github.com/datitran/raccoon_dataset)
+
+Will contain:
+- xml_to_csv.py
+- generate_tfrecord.py
 
 **Tensorflow detection model zoo** [(Link)](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
